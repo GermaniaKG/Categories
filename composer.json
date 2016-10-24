@@ -1,7 +1,7 @@
 {
 	"name":        "germania-kg/categories",
 
-	"type":        "project",
+	"type":        "library",
 	"license":     "proprietary",
 
 	"authors": [
