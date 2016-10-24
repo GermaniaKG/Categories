@@ -4,6 +4,9 @@ namespace Germania\Categories;
 class Categories implements CategoriesInterface
 {
 
+    /**
+     * @var array
+     */
     public $categories = array();
 
 
@@ -15,8 +18,9 @@ class Categories implements CategoriesInterface
 
 
     /**
-     * @implements ContainerInterface
      * @return CategoryInterface
+     * @throws CategoryNotFoundException
+     * @uses   $categories
      */
     public function get( $id )
     {
@@ -28,8 +32,8 @@ class Categories implements CategoriesInterface
 
 
     /**
-     * @implements ContainerInterface
      * @return boolean
+     * @uses   $categories
      */
     public function has ($id )
     {
@@ -39,7 +43,8 @@ class Categories implements CategoriesInterface
 
 
     /**
-     * @implements IteratorAggregate
+     * @return ArrayIterator
+     * @uses   $categories
      */
     public function getIterator()
     {
@@ -48,7 +53,8 @@ class Categories implements CategoriesInterface
 
 
     /**
-     * @implements Countable
+     * @return int
+     * @uses   $categories
      */
     public function count()
     {

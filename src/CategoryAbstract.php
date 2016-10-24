@@ -3,27 +3,39 @@ namespace Germania\Categories;
 
 abstract class CategoryAbstract implements CategoryInterface
 {
-    public $id;
-    public $slug;
-    public $name;
-    public $description;
 
     /**
-     * Gets the value of id.
-     *
-     * @return mixed
+     * @var int
+     */
+    public $id;
+
+    /**
+     * @var string
+     */
+    public $slug;
+
+    /**
+     * @var string
+     */
+    public $name;
+
+    /**
+     * @var string
+     */
+    public $description;
+
+
+    /**
+     * @uses $id
      */
     public function getId()
     {
         return $this->id;
     }
 
+
     /**
-     * Sets the value of id.
-     *
-     * @param mixed $id the id
-     *
-     * @return self
+     * @uses $id
      */
     public function setId($id)
     {
@@ -32,22 +44,18 @@ abstract class CategoryAbstract implements CategoryInterface
         return $this;
     }
 
+
     /**
-     * Gets the value of slug.
-     *
-     * @return mixed
+     * @uses $slug
      */
     public function getSlug()
     {
         return $this->slug;
     }
 
+
     /**
-     * Sets the value of slug.
-     *
-     * @param mixed $slug the slug
-     *
-     * @return self
+     * @uses $slug
      */
     public function setSlug($slug)
     {
@@ -56,22 +64,18 @@ abstract class CategoryAbstract implements CategoryInterface
         return $this;
     }
 
+
     /**
-     * Gets the value of name.
-     *
-     * @return mixed
+     * @uses $name
      */
     public function getName()
     {
         return $this->name;
     }
 
+
     /**
-     * Sets the value of name.
-     *
-     * @param mixed $name the name
-     *
-     * @return self
+     * @uses $name
      */
     public function setName($name)
     {
@@ -80,22 +84,18 @@ abstract class CategoryAbstract implements CategoryInterface
         return $this;
     }
 
+
     /**
-     * Gets the value of description.
-     *
-     * @return mixed
+     * @uses $description
      */
     public function getDescription()
     {
         return $this->description;
     }
 
+
     /**
-     * Sets the value of description.
-     *
-     * @param mixed $description the description
-     *
-     * @return self
+     * @uses $description
      */
     public function setDescription($description)
     {
