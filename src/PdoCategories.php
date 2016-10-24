@@ -4,6 +4,8 @@ namespace Germania\Categories;
 class PdoCategories extends Categories implements CategoriesInterface
 {
 
+    public static $table = 'categories';
+
     public $categories = array();
 
     public function __construct( \PDO $pdo, CategoryInterface $category = null  )
@@ -16,7 +18,7 @@ class PdoCategories extends Categories implements CategoriesInterface
         category_name        AS name,
         category_description AS description
 
-        FROM categories
+        FROM ' . static::$table . '
         WHERE is_active > 0';
 
         $stmt = $pdo->prepare( $sql );
