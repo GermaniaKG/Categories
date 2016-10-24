@@ -4,8 +4,15 @@ namespace Germania\Categories;
 class PdoCategories extends Categories implements CategoriesInterface
 {
 
+    /**
+     * @var string
+     */
     public static $table = 'categories';
 
+
+    /**
+     * @var array
+     */
     public $categories = array();
 
 

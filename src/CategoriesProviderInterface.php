@@ -15,4 +15,5 @@ interface CategoriesProviderInterface
      * @return self
      */
     public function setCategories( CategoriesInterface $categories);
+
 }

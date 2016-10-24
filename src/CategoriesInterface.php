@@ -11,4 +11,5 @@ interface CategoriesInterface extends \IteratorAggregate, \Countable, ContainerI
      * @return self
      */
     public function push (CategoryInterface $category );
+
 }
