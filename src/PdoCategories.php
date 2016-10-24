@@ -8,6 +8,11 @@ class PdoCategories extends Categories implements CategoriesInterface
 
     public $categories = array();
 
+
+    /**
+     * @param PDO @pdo
+     * @param CategoryInterface Optional: Category template object
+     */
     public function __construct( \PDO $pdo, CategoryInterface $category = null  )
     {
         // ID is listed twice here in order to use it with FETCH_UNIQUE as array key
