@@ -18,12 +18,15 @@ class PdoCategories extends Categories implements CategoriesInterface
 
     /**
      * @param PDO @pdo
-     * @param CategoryInterface Optional: Category template object
+     * @param CategoryInterface $category  Optional: Category template object
+     * @param string            $table     Optional: Categories table name
      */
-    public function __construct( \PDO $pdo, CategoryInterface $category = null  )
+    public function __construct( \PDO $pdo, CategoryInterface $category = null, $table = null  )
     {
+        $table = $table ?: static::$table;
+
         // ID is listed twice here in order to use it with FETCH_UNIQUE as array key
-        $sql = 'SELECT
+        $sql = "SELECT
         id,
         id                   AS id,
         category_slug        AS slug,
@@ -31,8 +34,8 @@ class PdoCategories extends Categories implements CategoriesInterface
         category_description AS description,
         category_photo       AS photo
 
-        FROM ' . static::$table . '
-        WHERE is_active > 0';
+        FROM $table
+        WHERE is_active > 0";
 
         $stmt = $pdo->prepare( $sql );
 
