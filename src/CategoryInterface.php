@@ -56,4 +56,17 @@ interface CategoryInterface
     public function getDescription( );
 
 
+    /**
+     * @param string $photo
+     * @return self
+     */
+    public function setPhoto( $photo );
+
+
+    /**
+     * @return null|string
+     */
+    public function getPhoto( );
+
+
 }

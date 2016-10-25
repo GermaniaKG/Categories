@@ -10,7 +10,7 @@ class CategoryTest extends \PHPUnit_Framework_TestCase
     /**
      * @dataProvider provideDefaults
      */
-    public function testFluidInterfaces($id, $slug, $name, $description ) {
+    public function testFluidInterfaces($id, $slug, $name, $description, $photo ) {
         $sut = new Category;
 
         $this->assertInstanceOf('Germania\Categories\CategoryInterface', $sut);
@@ -19,6 +19,7 @@ class CategoryTest extends \PHPUnit_Framework_TestCase
         $this->assertSame($sut, $sut->setSlug( $slug ));
         $this->assertSame($sut, $sut->setName( $name ));
         $this->assertSame($sut, $sut->setDescription( $description ));
+        $this->assertSame($sut, $sut->setPhoto( $photo ));
 
     }
 
@@ -27,13 +28,14 @@ class CategoryTest extends \PHPUnit_Framework_TestCase
     /**
      * @dataProvider provideDefaults
      */
-    public function testInterceptors($id, $slug, $name, $description ) {
+    public function testInterceptors($id, $slug, $name, $description, $photo ) {
         $sut = new Category;
 
         $this->assertEquals($id,   $sut->setId( $id )->getId());
         $this->assertEquals($slug, $sut->setSlug( $slug )->getSlug());
         $this->assertEquals($name, $sut->setName( $name )->getName());
         $this->assertEquals($description, $sut->setDescription( $description )->getDescription());
+        $this->assertEquals($photo, $sut->setPhoto( $photo )->getPhoto());
     }
 
 
@@ -51,7 +53,7 @@ class CategoryTest extends \PHPUnit_Framework_TestCase
     public function provideDefaults()
     {
         return array(
-            [ 42, 'mycat', 'My Category', 'This is a sample category.']
+            [ 42, 'mycat', 'My Category', 'This is a sample category.', "photo_url"]
         );
     }
 }
