@@ -24,6 +24,11 @@ abstract class CategoryAbstract implements CategoryInterface
      */
     public $description;
 
+    /**
+     * @var string
+     */
+    public $photo;
+
 
     /**
      * @uses $id
@@ -100,6 +105,30 @@ abstract class CategoryAbstract implements CategoryInterface
     public function setDescription($description)
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Gets the value of photo.
+     *
+     * @return string
+     */
+    public function getPhoto()
+    {
+        return $this->photo;
+    }
+
+    /**
+     * Sets the value of photo.
+     *
+     * @param string $photo the photo
+     *
+     * @return self
+     */
+    public function setPhoto($photo)
+    {
+        $this->photo = $photo;
 
         return $this;
     }

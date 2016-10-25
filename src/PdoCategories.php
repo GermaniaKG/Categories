@@ -28,7 +28,8 @@ class PdoCategories extends Categories implements CategoriesInterface
         id                   AS id,
         category_slug        AS slug,
         category_name        AS name,
-        category_description AS description
+        category_description AS description,
+        category_photo       AS photo
 
         FROM ' . static::$table . '
         WHERE is_active > 0';
