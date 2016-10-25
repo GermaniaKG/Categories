@@ -4,20 +4,38 @@ namespace Germania\Categories;
 class PdoCategories extends Categories implements CategoriesInterface
 {
 
+    /**
+     * @var string
+     */
+    public static $table = 'categories';
+
+
+    /**
+     * @var array
+     */
     public $categories = array();
 
-    public function __construct( \PDO $pdo, CategoryInterface $category = null  )
+
+    /**
+     * @param PDO @pdo
+     * @param CategoryInterface $category  Optional: Category template object
+     * @param string            $table     Optional: Categories table name
+     */
+    public function __construct( \PDO $pdo, CategoryInterface $category = null, $table = null  )
     {
+        $table = $table ?: static::$table;
+
         // ID is listed twice here in order to use it with FETCH_UNIQUE as array key
-        $sql = 'SELECT
+        $sql = "SELECT
         id,
         id                   AS id,
         category_slug        AS slug,
         category_name        AS name,
-        category_description AS description
+        category_description AS description,
+        category_photo       AS photo
 
-        FROM categories
-        WHERE is_active > 0';
+        FROM $table
+        WHERE is_active > 0";
 
         $stmt = $pdo->prepare( $sql );
 
