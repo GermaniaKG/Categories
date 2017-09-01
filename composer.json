@@ -2,7 +2,8 @@
 	"name":        "germania-kg/categories",
 
 	"type":        "library",
-	"license":     "proprietary",
+
+	"license":     "MIT",
 
 	"authors": [
 		{

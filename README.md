@@ -17,24 +17,31 @@ $ composer require germania-kg/categories
 
 While the *Categories* class is a simple storage, *PdoCategories* reads all downloads from the database. They both implement the [container-interop](https://github.com/container-interop/container-interop) (upcoming [PSR 11](https://github.com/php-fig/fig-standards/blob/master/proposed/container.md) standard), [IteratorAggregate](http://php.net/manual/de/class.iteratoraggregate.php) and SPL's [Countable](http://php.net/manual/de/class.countable.php). 
 
-You can iterate over it all worlds due to its  interface, and you can retrieve single *Download* instances:
-
 ```php
 <?php
 use Germania\Categories\Categories;
 use Germania\Categories\PdoCategories;
 use Germania\Categories\Category;
 
-$cat = new Categories( );
+//
+// 1. Simple usage:
+//
+$categories = new Categories( );
 
 $cat = new Category;
 $cat->setUrl( 'http://...' );
 $categories->push( $cat );
 
-// Or, get all from PDO datebase:
+
+//
+// 2. Or, get all from PDO datebase:
+//
 $categories = new PdoCategories( $pdo );
 
+
+//
 // Check on ID and retrieve
+//
 $check = $categories->has( 42 );
 $my_cat = $categories->get( 42 );
 
@@ -42,15 +49,28 @@ echo $my_cat->getUrl();
 ?>
 ```
 
+## Issues
 
-## Development and Testing
+- Since [PSR 11](https://github.com/php-fig/fig-standards/blob/master/proposed/container.md) is now standard, [container-interop](https://github.com/container-interop/container-interop) should be retired. Discuss at [issue #1][i1].
 
-Develop using `develop` branch, using [Git Flow](https://github.com/nvie/gitflow).   
-**Currently, no tests are specified.**
+Also see [full issues list.][i0]
+
+[i0]: https://github.com/GermaniaKG/Categories/issues 
+[i1]: https://github.com/GermaniaKG/Categories/issues/1 
+
+## Development
 
 ```bash
 $ git clone git@github.com:GermaniaKG/Categories.git germania-categories
 $ cd germania-categories
-$ cp phpunit.xml.dist phpunit.xml
-$ phpunit
+$ composer install
+```
+
+## Unit tests
+
+Either copy `phpunit.xml.dist` to `phpunit.xml` and adapt to your needs, or leave as is. 
+Run [PhpUnit](https://phpunit.de/) like this:
+
+```bash
+$ vendor/bin/phpunit
 ```
