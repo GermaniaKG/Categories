@@ -23,16 +23,25 @@ use Germania\Categories\Categories;
 use Germania\Categories\PdoCategories;
 use Germania\Categories\Category;
 
-$cat = new Categories( );
+//
+// 1. Simple usage:
+//
+$categories = new Categories( );
 
 $cat = new Category;
 $cat->setUrl( 'http://...' );
 $categories->push( $cat );
 
-// Or, get all from PDO datebase:
+
+//
+// 2. Or, get all from PDO datebase:
+//
 $categories = new PdoCategories( $pdo );
 
+
+//
 // Check on ID and retrieve
+//
 $check = $categories->has( 42 );
 $my_cat = $categories->get( 42 );
 
