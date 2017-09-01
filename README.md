@@ -4,7 +4,9 @@
 You better do not want it to use this in production.
 
 [![Build Status](https://travis-ci.org/GermaniaKG/Categories.svg?branch=master)](https://travis-ci.org/GermaniaKG/Categories)
-
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/GermaniaKG/Categories/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/Categories/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/GermaniaKG/Categories/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/Categories/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/GermaniaKG/Categories/badges/build.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/Categories/build-status/master)
 
 ## Installation
 
