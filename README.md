@@ -17,8 +17,6 @@ $ composer require germania-kg/categories
 
 While the *Categories* class is a simple storage, *PdoCategories* reads all downloads from the database. They both implement the [container-interop](https://github.com/container-interop/container-interop) (upcoming [PSR 11](https://github.com/php-fig/fig-standards/blob/master/proposed/container.md) standard), [IteratorAggregate](http://php.net/manual/de/class.iteratoraggregate.php) and SPL's [Countable](http://php.net/manual/de/class.countable.php). 
 
-You can iterate over it all worlds due to its  interface, and you can retrieve single *Download* instances:
-
 ```php
 <?php
 use Germania\Categories\Categories;
