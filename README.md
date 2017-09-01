@@ -1,10 +1,10 @@
-#Germania\Categories
+# Germania KG · Categories
 
 **This package was destilled from legacy code!**   
 You better do not want it to use this in production.
 
 
-##Installation
+## Installation
 
 ```bash
 $ composer require germania-kg/categories
@@ -13,7 +13,7 @@ $ composer require germania-kg/categories
 **MySQL:** This package requires a MySQL tables *categories* which you can install using `germania_categories.sql` in `sql/` directory.
 
 
-##Usage
+## Usage
 
 While the *Categories* class is a simple storage, *PdoCategories* reads all downloads from the database. They both implement the [container-interop](https://github.com/container-interop/container-interop) (upcoming [PSR 11](https://github.com/php-fig/fig-standards/blob/master/proposed/container.md) standard), [IteratorAggregate](http://php.net/manual/de/class.iteratoraggregate.php) and SPL's [Countable](http://php.net/manual/de/class.countable.php). 
 
@@ -43,7 +43,7 @@ echo $my_cat->getUrl();
 ```
 
 
-##Development and Testing
+## Development and Testing
 
 Develop using `develop` branch, using [Git Flow](https://github.com/nvie/gitflow).   
 **Currently, no tests are specified.**
