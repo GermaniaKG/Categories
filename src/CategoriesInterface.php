@@ -2,8 +2,9 @@
 namespace Germania\Categories;
 
 use Interop\Container\ContainerInterface;
+use Psr\Container\ContainerInterface as PsrContainerInterface;
 
-interface CategoriesInterface extends \IteratorAggregate, \Countable, ContainerInterface
+interface CategoriesInterface extends \IteratorAggregate, \Countable, PsrContainerInterface, ContainerInterface
 {
 
     /**
