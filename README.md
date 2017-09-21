@@ -19,7 +19,8 @@ $ composer require germania-kg/categories
 
 ## Usage
 
-While the *Categories* class is a simple storage, *PdoCategories* reads all downloads from the database. They both implement the [container-interop](https://github.com/container-interop/container-interop) (upcoming [PSR 11](https://github.com/php-fig/fig-standards/blob/master/proposed/container.md) standard), [IteratorAggregate](http://php.net/manual/de/class.iteratoraggregate.php) and SPL's [Countable](http://php.net/manual/de/class.countable.php). 
+While the *Categories* class is a simple storage, *PdoCategories* reads all downloads from the database.
+They both implement the [PSR-11 ContainerInterface](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-11-container.md)  as well as its [container-interop](https://github.com/container-interop/container-interop) antecessor, [IteratorAggregate](http://php.net/manual/de/class.iteratoraggregate.php) and SPL's [Countable](http://php.net/manual/de/class.countable.php).
 
 ```php
 <?php
@@ -59,8 +60,8 @@ echo $my_cat->getUrl();
 
 Also see [full issues list.][i0]
 
-[i0]: https://github.com/GermaniaKG/Categories/issues 
-[i1]: https://github.com/GermaniaKG/Categories/issues/1 
+[i0]: https://github.com/GermaniaKG/Categories/issues
+[i1]: https://github.com/GermaniaKG/Categories/issues/1
 
 ## Development
 
@@ -72,7 +73,7 @@ $ composer install
 
 ## Unit tests
 
-Either copy `phpunit.xml.dist` to `phpunit.xml` and adapt to your needs, or leave as is. 
+Either copy `phpunit.xml.dist` to `phpunit.xml` and adapt to your needs, or leave as is.
 Run [PhpUnit](https://phpunit.de/) like this:
 
 ```bash
