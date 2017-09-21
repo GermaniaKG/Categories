@@ -34,7 +34,7 @@ use Germania\Categories\Category;
 $categories = new Categories( );
 
 $cat = new Category;
-$cat->setUrl( 'http://...' );
+$cat->setSlug( 'cars' );
 $categories->push( $cat );
 
 
