@@ -50,7 +50,7 @@ $categories = new PdoCategories( $pdo );
 $check = $categories->has( 42 );
 $my_cat = $categories->get( 42 );
 
-echo $my_cat->getUrl();
+echo $my_cat->getSlug();
 ?>
 ```
 
