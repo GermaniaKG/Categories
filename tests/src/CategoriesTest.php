@@ -8,7 +8,7 @@ use Interop\Container\ContainerInterface;
 use Psr\Container\ContainerInterface as PsrContainerInterface;
 use Psr\Container\NotFoundExceptionInterface;
 
-class CategoriesTest extends \PHPUnit_Framework_TestCase
+class CategoriesTest extends \PHPUnit\Framework\TestCase
 {
 
 

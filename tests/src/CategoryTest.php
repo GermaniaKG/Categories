@@ -3,7 +3,7 @@ namespace tests;
 
 use Germania\Categories\Category;
 
-class CategoryTest extends \PHPUnit_Framework_TestCase
+class CategoryTest extends \PHPUnit\Framework\TestCase
 {
 
 
