@@ -3,12 +3,17 @@
 **This package was destilled from legacy code!**   
 You better do not want it to use this in production.
 
-[![Build Status](https://travis-ci.org/GermaniaKG/Categories.svg?branch=master)](https://travis-ci.org/GermaniaKG/Categories)
+
+
+[![Packagist](https://img.shields.io/packagist/v/germania-kg/categories.svg?style=flat)](https://packagist.org/packages/germania-kg/categories)
+[![PHP version](https://img.shields.io/packagist/php-v/germania-kg/categories.svg)](https://packagist.org/packages/germania-kg/categories)
+[![Build Status](https://img.shields.io/travis/GermaniaKG/Categories.svg?label=Travis%20CI)](https://travis-ci.org/GermaniaKG/Categories)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/GermaniaKG/Categories/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/Categories/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/GermaniaKG/Categories/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/Categories/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/GermaniaKG/Categories/badges/build.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/Categories/build-status/master)
 
-## Installation
+
+## Installation with Composer
 
 ```bash
 $ composer require germania-kg/categories
@@ -63,19 +68,21 @@ Also see [full issues list.][i0]
 [i0]: https://github.com/GermaniaKG/Categories/issues
 [i1]: https://github.com/GermaniaKG/Categories/issues/1
 
+
 ## Development
 
 ```bash
-$ git clone git@github.com:GermaniaKG/Categories.git germania-categories
-$ cd germania-categories
+$ git clone https://github.com/GermaniaKG/Categories.git
+$ cd Categories
 $ composer install
 ```
 
 ## Unit tests
 
-Either copy `phpunit.xml.dist` to `phpunit.xml` and adapt to your needs, or leave as is.
-Run [PhpUnit](https://phpunit.de/) like this:
+Either copy `phpunit.xml.dist` to `phpunit.xml` and adapt to your needs, or leave as is. Run [PhpUnit](https://phpunit.de/) test or composer scripts like this:
 
 ```bash
+$ composer test
+# or
 $ vendor/bin/phpunit
 ```
