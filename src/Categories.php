@@ -22,6 +22,7 @@ class Categories implements CategoriesInterface
      * @throws CategoryNotFoundException
      * @uses   $categories
      */
+    #[\ReturnTypeWillChange]
     public function get( $id )
     {
         if ($this->has( $id )) {
@@ -35,6 +36,7 @@ class Categories implements CategoriesInterface
      * @return boolean
      * @uses   $categories
      */
+    #[\ReturnTypeWillChange]
     public function has ($id )
     {
         return array_key_exists( $id, $this->categories);
@@ -43,9 +45,10 @@ class Categories implements CategoriesInterface
 
 
     /**
-     * @return ArrayIterator
+     * @return \ArrayIterator
      * @uses   $categories
      */
+    #[\ReturnTypeWillChange]
     public function getIterator()
     {
         return new \ArrayIterator( $this->categories );
@@ -56,6 +59,7 @@ class Categories implements CategoriesInterface
      * @return int
      * @uses   $categories
      */
+    #[\ReturnTypeWillChange]
     public function count()
     {
         return count($this->categories);
