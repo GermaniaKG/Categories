@@ -17,7 +17,7 @@ class PdoCategories extends Categories implements CategoriesInterface
 
 
     /**
-     * @param PDO @pdo
+     * @param \PDO              $pdo
      * @param CategoryInterface $category  Optional: Category template object
      * @param string            $table     Optional: Categories table name
      */

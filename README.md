@@ -7,11 +7,7 @@ You better do not want it to use this in production.
 
 [![Packagist](https://img.shields.io/packagist/v/germania-kg/categories.svg?style=flat)](https://packagist.org/packages/germania-kg/categories)
 [![PHP version](https://img.shields.io/packagist/php-v/germania-kg/categories.svg)](https://packagist.org/packages/germania-kg/categories)
-[![Build Status](https://img.shields.io/travis/GermaniaKG/Categories.svg?label=Travis%20CI)](https://travis-ci.org/GermaniaKG/Categories)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/GermaniaKG/Categories/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/Categories/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/GermaniaKG/Categories/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/Categories/?branch=master)
-[![Build Status](https://scrutinizer-ci.com/g/GermaniaKG/Categories/badges/build.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/Categories/build-status/master)
-
+[![Tests](https://github.com/GermaniaKG/Categories/actions/workflows/tests.yml/badge.svg)](https://github.com/GermaniaKG/Categories/actions/workflows/tests.yml)
 
 ## Installation with Composer
 
